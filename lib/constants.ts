@@ -1,0 +1,1 @@
+export const DOWNLOAD_URL = "https://github.com/bhataasim1/linked-genie/releases/download/v1/LinkedGenie.zip"

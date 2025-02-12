@@ -3,8 +3,14 @@ import { containerVariants, itemVariants } from "@/lib/animation-variants";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { HeroVideoDialog } from "@/components/ui/hero-video-dialog";
 import { EnhancedButton } from "./ui/enhanced-btn";
+import { DOWNLOAD_URL } from "@/lib/constants";
 
 export const HeroCard = () => {
+  
+  const handleDownload = () => {
+    window.open(DOWNLOAD_URL, "_blank");
+  }
+
   return (
     <>
       <motion.div
@@ -16,7 +22,7 @@ export const HeroCard = () => {
           <EnhancedButton
             variant="expandIcon"
             Icon={FaArrowRightLong}
-            onClick={() => { }}
+            onClick={handleDownload}
             iconPlacement="right"
             className="mt-2 w-full"
           >
