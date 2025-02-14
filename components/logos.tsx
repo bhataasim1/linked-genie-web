@@ -3,16 +3,23 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { containerVariants, itemVariants } from '@/lib/animation-variants'
 import TextBlur from './ui/text-blur'
+import LINKEDIN_LOGO from '@/public/LinkedIn-Logo.wine.png'
 
-const companies = [
-  'Google',
-  'Microsoft',
-  'Amazon',
-  'Netflix',
-  'YouTube',
-  'Instagram',
-  'Uber',
-  'Spotify',
+// const companies = [
+//   'Google',
+//   'Microsoft',
+//   'Amazon',
+//   'Netflix',
+//   'YouTube',
+//   'Instagram',
+//   'Uber',
+//   'Spotify',
+// ]
+
+const LOGOS = [
+  { src: LINKEDIN_LOGO, alt: 'LinkedIn' },
+  { src: LINKEDIN_LOGO, alt: 'LinkedIn' },
+  { src: LINKEDIN_LOGO, alt: 'LinkedIn' },
 ]
 
 export default function Logos() {
@@ -27,30 +34,32 @@ export default function Logos() {
         <motion.div variants={itemVariants}>
           <TextBlur
             className="text-center text-2xl font-medium tracking-tight text-zinc-200 md:text-3xl"
-            text="Trusted by"
+            text="Supports"
           />
         </motion.div>
 
-        <motion.div variants={itemVariants}>
-        <TextBlur
-          className="text-center text-base text-zinc-300 sm:text-lg"
-          text="Users working at top companies"
-          duration={0.8}
-        />
-      </motion.div>
+        {/* <motion.div variants={itemVariants}>
+          <TextBlur
+            className="text-center text-base text-zinc-300 sm:text-lg"
+            text="Currently supports the following companies"
+            duration={0.8}
+          />
+        </motion.div> */}
 
         <motion.div
           variants={itemVariants}
           className="relative mt-6">
           <Marquee className="max-w-full [--duration:40s]">
-            {companies.map((logo, idx) => (
+            {LOGOS.map((logo, idx) => (
               <Image
                 key={idx}
-                width={112}
+                width={200}
                 height={40}
-                src={`https://cdn.magicui.design/companies/${logo}.svg`}
-                className="h-10 w-28 opacity-30 grayscale dark:brightness-0 dark:invert"
-                alt={logo}
+                src={logo.src}
+                className="h-30 w-28 opacity-30 grayscale dark:brightness-0 dark:invert"
+                alt={logo.alt}
+                // src={`https://cdn.magicui.design/companies/${logo}.svg`}
+                // className="h-10 w-28 opacity-30 grayscale dark:brightness-0 dark:invert"
               />
             ))}
           </Marquee>

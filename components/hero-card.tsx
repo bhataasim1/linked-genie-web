@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/lib/animation-variants";
-import { FaArrowRightLong } from "react-icons/fa6";
 import { HeroVideoDialog } from "@/components/ui/hero-video-dialog";
 import { EnhancedButton } from "./ui/enhanced-btn";
 import { DOWNLOAD_URL } from "@/lib/constants";
+import { ChromeIcon } from "lucide-react";
+import VIDEO_THUMBNAIL from "@/public/video-thumbnail-dark.png"
 
 export const HeroCard = () => {
-  
+
   const handleDownload = () => {
     window.open(DOWNLOAD_URL, "_blank");
   }
@@ -21,7 +22,7 @@ export const HeroCard = () => {
         <motion.div variants={itemVariants}>
           <EnhancedButton
             variant="expandIcon"
-            Icon={FaArrowRightLong}
+            Icon={ChromeIcon}
             onClick={handleDownload}
             iconPlacement="right"
             className="mt-2 w-full"
@@ -45,7 +46,7 @@ export const HeroCard = () => {
             className="block"
             animationStyle="from-center"
             videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
-            thumbnailSrc="https://startup-template-sage.vercel.app/hero-light.png"
+            thumbnailSrc={VIDEO_THUMBNAIL.src}
             thumbnailAlt="Hero Video"
           />
         </motion.div>
