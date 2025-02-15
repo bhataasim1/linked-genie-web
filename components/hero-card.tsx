@@ -45,7 +45,7 @@ export const HeroCard = () => {
           <HeroVideoDialog
             className="block"
             animationStyle="from-center"
-            videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
+            videoSrc="https://firebasestorage.googleapis.com/v0/b/personal-projects-b63b3.appspot.com/o/linked-genie%2Flinked-genie-video.mp4?alt=media&token=58780565-5dee-4e87-9cf7-53e0dce99d21"
             thumbnailSrc={VIDEO_THUMBNAIL.src}
             thumbnailAlt="Hero Video"
           />

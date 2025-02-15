@@ -29,7 +29,7 @@ export default function Logos() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="container mx-auto px-4 py-12 md:px-8 md:pb-24 md:pt-16"
+        className="container mx-auto px-4 py-12 md:px-8 md:pb-8 md:pt-16"
       >
         <motion.div variants={itemVariants}>
           <TextBlur
