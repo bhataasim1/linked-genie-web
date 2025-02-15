@@ -6,7 +6,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Logos from "@/components/logos";
 import { HeroCard } from "@/components/hero-card";
-
+import FAQ from "@/components/faq";
 
 export default function Home() {
   return (
@@ -20,6 +20,8 @@ export default function Home() {
       </section>
 
       <Logos />
+
+      <FAQ />
 
       <Footer />
 
