@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 import { containerVariants, itemVariants } from '@/lib/animation-variants';
 import Link from 'next/link';
 import TextBlur from './ui/text-blur';
-import { faqs } from '@/lib/faq';
+import { faqsQuestions } from '@/lib/faqQuestions';
 
 
 export default function FAQ() {
@@ -40,7 +40,7 @@ export default function FAQ() {
           collapsible
           className="flex w-full flex-col items-center justify-center space-y-2"
         >
-          {faqs.map((faq, idx) => (
+          {faqsQuestions.map((faq, idx) => (
             <AccordionItem
               key={idx}
               value={faq.question}
